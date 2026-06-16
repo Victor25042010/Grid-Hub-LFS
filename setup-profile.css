@@ -1,0 +1,245 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+
+  background: #090909;
+
+  font-family: 'Orbitron', sans-serif;
+
+  color: white;
+
+  overflow-x: hidden;
+}
+
+/* OVERLAY */
+
+.profile-overlay{
+
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.92)
+  );
+
+  z-index: 1;
+}
+
+/* BANNER */
+
+.banner-area{
+
+  width: 100%;
+  height: 420px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.banner-area img{
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: brightness(0.45);
+}
+
+.change-banner{
+
+  position: absolute;
+
+  bottom: 20px;
+  right: 20px;
+
+  padding: 12px 24px;
+
+  border-radius: 12px;
+
+  background: rgba(0,0,0,0.6);
+
+  cursor: pointer;
+
+  z-index: 3;
+}
+
+#bannerInput{
+  display: none;
+}
+
+/* PROFILE */
+
+.profile-content{
+
+  width: 100%;
+
+  padding: 0 100px 80px;
+
+  margin-top: -90px;
+
+  display: flex;
+
+  gap: 50px;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.profile-photo-area{
+
+  width: 220px;
+  height: 220px;
+
+  position: relative;
+}
+
+.profile-photo-area img{
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 5px solid #111;
+}
+
+.change-photo{
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: #ff3131;
+
+  position: absolute;
+
+  bottom: 10px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+#profileInput{
+  display: none;
+}
+
+/* INFO */
+
+.profile-info{
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.profile-info input,
+.profile-info textarea,
+.profile-info select{
+
+  width: 100%;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  border:
+  1px solid rgba(255,255,255,0.06);
+
+  background:
+  rgba(255,255,255,0.04);
+
+  color: white;
+
+  outline: none;
+
+  font-family: 'Orbitron', sans-serif;
+}
+
+.profile-info textarea{
+
+  height: 140px;
+
+  resize: none;
+}
+
+.team-box{
+
+  display: flex;
+
+  gap: 20px;
+}
+
+#saveProfile{
+
+  width: 100%;
+  height: 65px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  background: #ff3131;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 900px){
+
+  .profile-content{
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 0 30px 50px;
+  }
+
+  .team-box{
+
+    flex-direction: column;
+  }
+
+}
+
+@media(max-width: 600px){
+
+  .banner-area{
+    height: 280px;
+  }
+
+  .profile-photo-area{
+
+    width: 160px;
+    height: 160px;
+  }
+
+}

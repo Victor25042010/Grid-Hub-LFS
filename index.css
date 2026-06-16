@@ -1,0 +1,137 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    overflow: hidden;
+    color: white;
+}
+
+/* ===== VIDEO BACKGROUND ===== */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.video-bg iframe {
+    width: 100vw;
+    height: 100vh;
+    transform: scale(1.2);
+}
+
+/* ESCURECER O VÍDEO */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+}
+
+/* ===== HERO TEXT ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #bbb;
+    max-width: 600px;
+}
+
+/* BOTÃO */
+.hero button {
+    margin-top: 25px;
+    padding: 15px 35px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== MODAL LOGIN ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.8);
+}
+
+.box {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    border: 1px solid #333;
+}
+
+.box input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #000;
+    border: 1px solid #333;
+    color: white;
+}
+
+.box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.primary {
+    background: white;
+}
+
+.secondary {
+    background: #222;
+    color: white;
+}
+
+/* ===== CREDITOS ===== */
+.credit {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #aaa;
+}
