@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+:root{
+    --bg:#1b1b1b;
+    --surface:#232323;
+    --surface2:#2d2d2d;
+    --border:rgba(255,255,255,.08);
+    --primary:#d62828;
+    --primary-hover:#b71c1c;
+    --text:#ffffff;
+    --muted:#bdbdbd;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:250px;
+    background:var(--surface);
+    border-right:1px solid var(--border);
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.sidebar h1{
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:30px;
+}
+
+.sidebar nav{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.sidebar nav a{
+    color:var(--text);
+    text-decoration:none;
+    padding:14px;
+    border-radius:10px;
+    transition:.25s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active{
+    background:var(--primary);
+}
+
+#logoutBtn{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#logoutBtn:hover{
+    background:var(--primary-hover);
+}
+
+.content{
+    flex:1;
+    margin-left:250px;
+    margin-right:320px;
+    padding:35px;
+}
+
+.create-post,
+.post,
+.card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.create-post{
+    padding:20px;
+    margin-bottom:30px;
+}
+
+.user-info{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.user-info img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.user-info span{
+    color:var(--muted);
+    font-size:14px;
+}
+
+#postText{
+    width:100%;
+    height:120px;
+    resize:none;
+    background:var(--surface2);
+    color:#fff;
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:15px;
+    margin:15px 0;
+}
+
+.post-actions{
+    display:flex;
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.post-actions input[type=text]{
+    flex:1;
+    background:var(--surface2);
+    color:#fff;
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:12px;
+}
+
+#publishBtn{
+    width:100%;
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:15px;
+    cursor:pointer;
+}
+
+#publishBtn:hover{
+    background:var(--primary-hover);
+}
+
+.post{
+    padding:20px;
+    margin-bottom:25px;
+}
+
+.post:hover,
+.card:hover{
+    transform:translateY(-2px);
+    transition:.25s;
+}
+
+.post-header{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.post-header img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+}
+
+.post-text{
+    margin:18px 0;
+    line-height:1.6;
+}
+
+.post-image,
+.youtube-frame{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.youtube-frame{
+    height:420px;
+    border:none;
+}
+
+.post-footer{
+    display:flex;
+    gap:10px;
+}
+
+.post-footer button{
+    flex:1;
+    padding:12px;
+    background:var(--surface2);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.post-footer button:hover{
+    background:var(--primary);
+}
+
+.right-panel{
+    position:fixed;
+    right:0;
+    top:0;
+    width:320px;
+    height:100vh;
+    padding:25px;
+    overflow:auto;
+}
+
+.card{
+    padding:18px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.event,
+.team{
+    padding:12px;
+    background:var(--surface2);
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:10px;
+}
+
+@media(max-width:1100px){
+    .right-panel{
+        display:none;
+    }
+    .content{
+        margin-right:0;
+    }
+}
+
+@media(max-width:800px){
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    body{
+        display:block;
+    }
+
+    .content{
+        margin:0;
+        padding:20px;
+    }
+
+    .post-actions,
+    .post-footer{
+        flex-direction:column;
+    }
+}

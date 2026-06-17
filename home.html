@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID HUB</title>
+
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h1>GRID HUB</h1>
+
+        <nav>
+
+            <a href="#" class="active">
+                🏠 Feed
+            </a>
+
+            <a href="#">
+                🏁 Eventos
+            </a>
+
+            <a href="#">
+                👥 Teams
+            </a>
+
+            <a href="#">
+                👤 Perfil
+            </a>
+
+            <a href="#">
+                🔔 Notificações
+            </a>
+
+            <a href="#">
+                ⚙ Configurações
+            </a>
+
+        </nav>
+
+        <button id="logoutBtn">
+            Sair
+        </button>
+
+    </aside>
+
+    <!-- Conteúdo -->
+    <main class="content">
+
+        <!-- Criar postagem -->
+
+        <section class="create-post">
+
+            <div class="user-info">
+
+                <img id="userPhoto"
+                    src="assets/default-avatar.png">
+
+                <div>
+
+                    <h3 id="username">
+                        Carregando...
+                    </h3>
+
+                    <span>
+                        Compartilhe algo com a comunidade.
+                    </span>
+
+                </div>
+
+            </div>
+
+            <textarea
+                id="postText"
+                placeholder="O que você está pensando?">
+            </textarea>
+
+            <div class="post-actions">
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*">
+
+                <input
+                    type="text"
+                    id="youtubeLink"
+                    placeholder="Cole um link do YouTube (Opcional)">
+
+            </div>
+
+            <button id="publishBtn">
+
+                Publicar
+
+            </button>
+
+        </section>
+
+        <!-- Feed -->
+
+        <section id="feed">
+
+        </section>
+
+    </main>
+
+    <!-- Painel direito -->
+
+    <aside class="right-panel">
+
+        <div class="card">
+
+            <h2>
+
+                🏁 Próximos Eventos
+
+            </h2>
+
+            <div class="event">
+
+                <h3>
+
+                    Drift Night
+
+                </h3>
+
+                <p>
+
+                    Hoje • 20:30
+
+                </p>
+
+            </div>
+
+            <div class="event">
+
+                <h3>
+
+                    Time Attack
+
+                </h3>
+
+                <p>
+
+                    Sexta • 22:00
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>
+
+                👥 Teams recrutando
+
+            </h2>
+
+            <div class="team">
+
+                No Brake
+
+            </div>
+
+            <div class="team">
+
+                Midnight
+
+            </div>
+
+            <div class="team">
+
+                Street Kings
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- Modelo da postagem -->
+
+    <template id="postTemplate">
+
+        <div class="post">
+
+            <div class="post-header">
+
+                <img
+                    class="avatar">
+
+                <div>
+
+                    <h3 class="author"></h3>
+
+                    <span class="date"></span>
+
+                </div>
+
+            </div>
+
+            <div class="post-text">
+
+            </div>
+
+            <img
+                class="post-image">
+
+            <iframe
+                class="youtube-frame"
+                allowfullscreen>
+            </iframe>
+
+            <div class="post-footer">
+
+                <button class="likeBtn">
+
+                    ❤️ Curtir
+
+                </button>
+
+                <button class="commentBtn">
+
+                    💬 Comentar
+
+                </button>
+
+                <button class="shareBtn">
+
+                    ↗ Compartilhar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </template>
+
+    <script type="module" src="js/home.js"></script>
+
+</body>
+
+</html>
